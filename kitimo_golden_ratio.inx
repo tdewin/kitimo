@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Golden Ratio</name>
+    <id>com.github.tdewin.inkscape.KitimoGoldenRatio</id>
+    <param name="tab" type="notebook">
+        <page name="Parameters" gui-text="Main Parameters">
+            <param name="max" type="int" min="2" max="50"   gui-text="Number of circles">8</param>
+            <param name="r"   type="int" min="1" max="100" gui-text="R of circle 1">1</param>
+            <param name="l"   type="int" min="1" max="100" gui-text="Line of circle">1</param>
+            <param name="x"   type="int" min="-10000" max="10000" gui-text="Offset X">0</param>
+            <param name="y"   type="int" min="-10000" max="10000" gui-text="Offset Y">0</param>
+        </page>
+        <page name="Help" gui-text="Help">
+            <label xml:space="preserve">This extension is just a sample to get started. Creates golden ratio's circle according to Fibonacci numbers
+            </label>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Kitimo"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">kitimo_golden_ratio.py</command>
+    </script>
+</inkscape-extension>
