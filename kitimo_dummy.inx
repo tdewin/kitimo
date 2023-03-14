@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Dummy</name>
+    <id>com.github.tdewin.inkscape.KitimoDummy</id>
+    <param name="tab" type="notebook">
+        <page name="Parameters" gui-text="Main Parameters">
+            <param name="l"   type="int" min="1" max="100" gui-text="Line of circle">1</param>
+            <param name="r"   type="int" min="1" max="100" gui-text="Radius of a circle">1</param>
+        </page>
+        <page name="Help" gui-text="Help">
+            <label xml:space="preserve">Doesn't do anything! Just for dumping
+            </label>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Kitimo"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">kitimo_dummy.py</command>
+    </script>
+</inkscape-extension>

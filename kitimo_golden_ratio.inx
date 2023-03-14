@@ -4,13 +4,15 @@
     <id>com.github.tdewin.inkscape.KitimoGoldenRatio</id>
     <param name="tab" type="notebook">
         <page name="Parameters" gui-text="Main Parameters">
-            <param name="max" type="int" min="2" max="50"   gui-text="Number of circles">8</param>
-            <param name="r"   type="int" min="1" max="100" gui-text="R of circle 1">1</param>
-            <param name="l"   type="int" min="1" max="100" gui-text="Line of circle">1</param>
+            <param name="max" type="int" min="2" max="50" appearance="full"  gui-text="Number of circles" gui-description="The numbers of circle you want generated, basically how many fibonacci numbers you want to see expressed in circles" >8</param>
+            <param name="r"   type="int" min="1" max="100" appearance="full"  gui-text="R of circle 1">1</param>
+            <param name="l"   type="int" min="1" max="100" appearance="full"  gui-text="Line of circle">1</param>
+		<param name="c" 	type="color" gui-text="Color for stroke">0x333333ff</param>
             <param name="x"   type="int" min="-10000" max="10000" gui-text="Offset X">0</param>
             <param name="y"   type="int" min="-10000" max="10000" gui-text="Offset Y">0</param>
         </page>
         <page name="Help" gui-text="Help">
+		<image width="100" height="50">kitimo_logo.svg</image>
             <label xml:space="preserve">This extension is just a sample to get started. Creates golden ratio's circle according to Fibonacci numbers
             </label>
         </page>

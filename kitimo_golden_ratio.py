@@ -16,6 +16,7 @@ class KitimoGoldenRatio(inkex.EffectExtension):
         pars.add_argument("--l", type=int, default=1)
         pars.add_argument("--x", type=int, default=0)
         pars.add_argument("--y", type=int, default=0)
+        pars.add_argument("--c", type=inkex.Color, default=inkex.Color("red"))
 
 
     def effect(self):
@@ -36,8 +37,12 @@ class KitimoGoldenRatio(inkex.EffectExtension):
         # textElement.text = ', '.join(str(x) for x in fib)
         # g.append(textElement)
 
+        # textElement = TextElement()
+        # textElement.text = str(self.options.c)
+        # g.append(textElement)
+
         r = self.options.r
-        s = Style.parse_str("fill:none;stroke:#333333;stroke-width:{0};stroke-linejoin:round;paint-order:markers fill stroke;stop-color:#000000".format(self.options.l))
+        s = Style.parse_str("fill:none;stroke:{1};stroke-width:{0};stroke-linejoin:round;paint-order:markers fill stroke;stop-color:#000000".format(self.options.l,str(self.options.c)))
 
         
         for f in fib:
