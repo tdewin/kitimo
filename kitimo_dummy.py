@@ -43,9 +43,6 @@ if __name__ == "__main__":
         f.write(data)
     else:
         f.write("No sigar {0} ...".format(potentialsvg))
-
+        
     f.close()
-
-
-
     KitimoDummy().run()

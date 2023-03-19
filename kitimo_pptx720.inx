@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>PPTX720</name>
+    <id>com.github.tdewin.inkscape.KitimoPPTX720</id>
+    <param name="tab" type="notebook">
+        <page name="Parameters" gui-text="Main Parameters">
+            <param name="height"  type="int" min="720" max="8640"  appearance="full" gui-text="Height of Presentation">720</param>
+            <param name="numPages"  type="int" min="1" max="30"  appearance="full" gui-text="Number Of Pages">1</param>
+            <param name="moveX"  type="float" min="0" max="100"  appearance="full" gui-text="Offset X Ratio Next Document">0</param>
+            <param name="moveY"  type="float" min="0" max="100"  appearance="full" gui-text="Offset Y Ratio Next Document">1</param>
+            <param name="ratio" type="optiongroup" appearance="radio/combo" gui-text="Ratio">
+                <option value="16/9">16/9</option>
+                <option value="4/3">4/3</option>
+		    <option value="16/10">16/10</option>
+            </param>
+		<param name="dark" type="bool" gui-text="Dark Presentation">false</param>
+        </page>
+        <page name="Help" gui-text="Help">
+            <label xml:space="preserve">Will set your document to px, with 1-1 ratio and width defined here for that perfect initial setup for powerpoint presentations
+            </label>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Kitimo"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">kitimo_pptx720.py</command>
+    </script>
+</inkscape-extension>

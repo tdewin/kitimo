@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>WhiteBoard</name>
+    <id>com.github.tdewin.inkscape.KitimoWhiteBoard</id>
+    <param name="tab" type="notebook">
+        <page name="Parameters" gui-text="Main Parameters">
+            <param name="fontSizeMode" type="optiongroup" appearance="radio/combo" gui-text="Font Size Mode">
+                <option value="1">Inherit From Selected Text</option>
+                <option value="2">Fixed</option>
+            </param>
+            <param name="fontSize"  type="int"  gui-text="Font Size" appearance="full" min="8" max="200">16</param>
+            <param name="bg"  type="color"  gui-text="Background Color">0x9effcaff</param>
+		    
+        </page>
+        <page name="Help" gui-text="Help">
+            <label xml:space="preserve">Sketching icons
+            </label>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Kitimo"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">kitimo_whiteboard.py</command>
+    </script>
+</inkscape-extension>
