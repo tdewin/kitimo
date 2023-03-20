@@ -8,12 +8,16 @@
             <param name="numPages"  type="int" min="1" max="30"  appearance="full" gui-text="Number Of Pages">1</param>
             <param name="moveX"  type="float" min="0" max="100"  appearance="full" gui-text="Offset X Ratio Next Document">0</param>
             <param name="moveY"  type="float" min="0" max="100"  appearance="full" gui-text="Offset Y Ratio Next Document">1</param>
+            <param name="guideX" type="string" gui-text="Vertical guidelines">100,1180</param>
+            <param name="guideY" type="string" gui-text="Horizontal guidelines">200</param>
             <param name="ratio" type="optiongroup" appearance="radio/combo" gui-text="Ratio">
                 <option value="16/9">16/9</option>
                 <option value="4/3">4/3</option>
 		    <option value="16/10">16/10</option>
             </param>
 		<param name="dark" type="bool" gui-text="Dark Presentation">false</param>
+        <param name="rectLayer" type="bool" gui-text="Create bg layer with rectangles">false</param>
+        <param name="fakeGuide" type="bool" gui-text="Create fake guide layer">false</param>
         </page>
         <page name="Help" gui-text="Help">
             <label xml:space="preserve">Will set your document to px, with 1-1 ratio and width defined here for that perfect initial setup for powerpoint presentations
